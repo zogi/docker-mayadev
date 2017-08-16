@@ -7,6 +7,9 @@ Additionally, the image has the following software installed:
 - [devtoolset-2](https://people.centos.org/tru/devtools-2/readme)
 - [cmake 2.8](https://cmake.org/)
 - [conan](https://www.conan.io/)
+- [boost 1.61](http://www.boost.org/users/history/version_1_61_0.html)
+- [libpng15](https://sourceforge.net/projects/libpng/files/libpng15/)
+- libGLU-devel, libX11-devel, libXt-devel (for Maya plugin development)
 
 # How to use it?
 
