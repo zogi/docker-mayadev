@@ -43,4 +43,8 @@ RUN echo 'PYTHONHOME=/usr/autodesk/maya2017 /usr/autodesk/maya2017/bin/conan "$@
 ENV MAYA_LOCATION=/usr/autodesk/maya2017
 ENV TBB_ROOT=/usr/autodesk/maya2017
 
+# The libfreetype.so packaged with Maya in this image is incompatible with the
+# glibc version shipped with this CentOS, so just overwrite it.
+RUN \cp -f /usr/lib64/libfreetype.so.6.3.22 /usr/autodesk/maya2017/lib/libfreetype.so
+
 WORKDIR /root
