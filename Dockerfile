@@ -47,4 +47,9 @@ ENV TBB_ROOT=/usr/autodesk/maya2017
 # glibc version shipped with this CentOS, so just overwrite it.
 RUN \cp -f /usr/lib64/libfreetype.so.6.3.22 /usr/autodesk/maya2017/lib/libfreetype.so
 
+# Add script to test plugin loading.
+WORKDIR /root/bin
+ADD test_plugin_load.py .
+RUN chmod +x test_plugin_load.py
+
 WORKDIR /root

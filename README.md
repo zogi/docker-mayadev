@@ -25,3 +25,10 @@ then run the image:
 ```bash
 $ docker run -ti --rm mayadev
 ```
+
+Inside the image the `/root/bin/test_plugin_load.py` script can be used to
+test loading Maya plugins like so:
+
+```
+$ test_plugin_load.py <path_to_my_plugin.so>
+```
