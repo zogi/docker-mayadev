@@ -2,6 +2,7 @@
 import maya.cmds
 import maya.standalone
 import sys
+import traceback
 
 if __name__ == "__main__":
     maya.standalone.initialize()
@@ -9,9 +10,11 @@ if __name__ == "__main__":
     try:
         success = bool(maya.cmds.loadPlugin(sys.argv[1]))
     except:
-        pass
+        traceback.print_exc()
 
     if success:
         print("PASS")
+        sys.exit(0)
     else:
         print("FAIL")
+        sys.exit(1)
