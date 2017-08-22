@@ -52,4 +52,6 @@ WORKDIR /root/bin
 ADD test_plugin_load.py .
 RUN chmod +x test_plugin_load.py
 
+RUN echo "alias te='ls -l'" >> ~/.bashrc
+
 WORKDIR /root
