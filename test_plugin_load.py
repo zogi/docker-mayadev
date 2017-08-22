@@ -1,6 +1,7 @@
 #!/usr/bin/env mayapy
 import maya.cmds
 import maya.standalone
+import sys
 
 if __name__ == "__main__":
     maya.standalone.initialize()
