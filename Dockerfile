@@ -10,6 +10,7 @@ RUN yum install -y devtoolset-2-gcc devtoolset-2-binutils devtoolset-2-gcc-c++ c
 
 # Libs needed for building Maya plugins.
 RUN yum install -y mesa-libGLU-devel libX11-devel libXt-devel
+RUN yum install -y devtoolset-2-libquadmath-devel
 
 # Add /root/bin, devtoolset-2 bin path and Maya bin path to PATH.
 ENV PATH=/root/bin:/opt/rh/devtoolset-2/root/usr/bin:/usr/autodesk/maya2017/bin:$PATH
