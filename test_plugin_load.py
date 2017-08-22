@@ -1,4 +1,4 @@
-#!/bin/env mayapy
+#!/usr/bin/env mayapy
 import maya.cmds
 import maya.standalone
 
