@@ -4,8 +4,13 @@ import maya.standalone
 
 if __name__ == "__main__":
     maya.standalone.initialize()
+    success = False
     try:
-        maya.cmds.loadPlugin(sys.argv[1])
-        print("PASS")
+        success = bool(maya.cmds.loadPlugin(sys.argv[1]))
     except:
+        pass
+
+    if success:
+        print("PASS")
+    else:
         print("FAIL")
